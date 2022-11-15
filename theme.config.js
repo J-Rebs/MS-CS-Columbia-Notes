@@ -2,9 +2,9 @@ export default {
   titleSuffix: ' – Joe Rebagliati',
   logo: (
     <>
-      <span className="mr-2 font-extrabold hidden md:inline">Nextra</span>
+      <span className="mr-2 font-extrabold hidden md:inline">Extra CS Notes</span>
       <span className="text-gray-600 font-normal hidden md:inline">
-        The Next.js Static Site Generator
+        Computer Science Assorted Notes
       </span>
     </>
   ),
@@ -59,7 +59,6 @@ export default {
   prevLinks: true,
   nextLinks: true,
   footer: true,
-  footerEditLink: 'Edit this page on GitHub',
   footerText: <>MIT {new Date().getFullYear()} © Joe Rebagliati.</>,
   unstable_faviconGlyph: '👋',
 }
