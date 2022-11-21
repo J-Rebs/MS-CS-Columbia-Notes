@@ -8,7 +8,7 @@ export default function Document () {
             rel="stylesheet" 
             href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" 
             integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" 
-            crossOrigin="anonymous"
+            crossorigin="anonymous"
         />
       </Head>
       <body>
