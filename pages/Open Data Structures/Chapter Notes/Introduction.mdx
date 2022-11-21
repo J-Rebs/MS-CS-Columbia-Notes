@@ -19,6 +19,17 @@ and implementation (algorithms and internal representation of data needed for op
 | Type      | Note      |
 |-----------|-----------|
 | List (includes Stack, Deque, Queue) | Sequence indexed by 0,1,2,...,n-1, implementations change behavior for adding or removing from the list |
-| Unordered Sets (includes Dictionaries, Maps) | Distinct elements in no particular order
+| Unordered Sets (includes Dictionaries, Maps) | Distinct elements in no particular order |
+| Sorted Sets | Provides ability to compare elements to determine ordering, find(x) more meaningful as you say find smallest y such that y >= x. Return y or null if does not exist. Slower runtime on find though versus Unsorted|
 
+# Mathematical background (🤓)
+
+These notes are brief. If there is time, in the future, could be good to look through [this](https://people.csail.mit.edu/meyer/mcs.pdf). Have not 
+yet had time to do so, but found based on citations for this book and a quick web search.
+
+## Exponents and Logarithms
+
+$b^x = b \times b \times \cdots \times b$, where the right hand side has $x$ $b$s in total and $b$ is a number.
+
+$b^x = \frac{1}{b^{-x}}$
 
