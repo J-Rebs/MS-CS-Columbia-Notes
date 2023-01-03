@@ -29,7 +29,7 @@ and implementation (algorithms and internal representation of data needed for op
 These notes are brief. If there is time, in the future, could be good to look through [this](https://people.csail.mit.edu/meyer/mcs.pdf). Have not 
 yet had time to do so, but found based on citations for this book and a quick web search.
 
-## Exponents and Logarithms
+## Exponents, Logarithms, and Factorials
 
 For some positive integer $b$, we can say that $b^x = b \times b \times \cdots \times b$ 
 where the right hand side has $b$ $x$ times. 
@@ -54,10 +54,32 @@ the result is less than or equal to 1.
 The natural log $log_e =$ ln$k$. 
 
 <Callout emoji="💭">
- Latex rendering in this document might have some limitations on subscripts (see the definition for $e$ below).
+ Latex rendering in this document might have some limitations on subscripts (see the definition for $e$ below). 
+ Also may not render correctly on a mobile device.
 </Callout>
 
 $e = \lim \ n \to \infty \ (1+\frac{1}{n})^n$ 
 
 Care about ln$k$ because solves integral for $\frac{1}{x}dx$ 
 from 1 to $k$. 
+
+
+Exponents and logarithms deal with scaling, and we can use Factorials
+for counting.
+
+For a non-negative integer $n$, $n! = 1 \dot 2 \dot 3 \cdots n$. 
+
+This gives the number of distinct orderings (i.e., permutations) of n elements.
+
+If instead we wanted to say how many subsets can we make from $n$ of size $k$, we can
+do $n$ choose $k$ to get a binomial coefficient. 
+
+$\binom(n,k) = \frac{n!}{k!(n-k)}$. 
+
+<Callout emoji="💭">
+$n$ choose $k$ is smaller than permutations of $n$, which
+seems to imply problems asking you to create subsets of a list 
+might be faster than determining all orderings of a list's elements...not sure 
+if true but intuitively would think so. Picking groups of apples seems less tedious then ordering 
+apples... 
+</Callout>
