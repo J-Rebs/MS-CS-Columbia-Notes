@@ -79,3 +79,71 @@ ${n \choose k} = \frac{n!}{k!(n-k)}$.
 <Callout emoji="💭">
 $n$ choose $k$ (i.e., number of distinct subsets) is smaller than permutations of $n$ (i.e., distinct orderings)
 </Callout>
+
+
+## Asymptotic Notation (run time)
+
+Time to execute = number of instructions run NOT total time in seconds
+for instructions to execute.
+
+To further simplify, use big-Oh notation.
+
+$O(f(n)) = $ $g(n)$ such that there exists $c>0$, and $n_0$ such that
+$g(n) \leq c \cdot f(n)$ for all $n \geq n_0$. 
+
+Note! $O(f(n))$ is actually a set not some number or a function like $f(x) = x^2$.
+
+For ease, may often say $f_1(n) = O(f(n))$ but properly, this would be $ f_1(n) \in O(f(n))$.
+
+The above also implies simplification. In other words, different functions can all be members of the 
+same different big-Oh set. This comes from the definition of big-Oh notation!
+
+It only needs to be true that for whatever $g(n)$ we pick, that $f(n)$ dominates $g(n)$. 
+
+For example $f(n) = 5n\log_n + 8n - 200$. 
+Then it is true that $f(n) \leq c\cdot n\log_n \implies f(n) \in O(n\log_n)$.
+where we can pick $c$ to be a big enough integer constant for the above to hold true.
+
+The definition of big-Oh also implies that one $f(n)$ can be in multiple 
+big-Oh sets. 
+
+$f(n)$ from above $\leq n\log_n$ but also $\leq c^n$ for some sufficiently large $c$. 
+
+This implies $f(n) \in O(n log_n)$ and $f(n) \in O(c^n)$. 
+
+Which leads to another implication! Some sets in big-Oh can be subsets of each other.
+
+For any $c_1 < c_2$ and constants $a,b,c > 0$: 
+
+ - $O(n^{c_1} < O(n^{c_2}$ 
+ - $O(a) \cup O(logn) \cup O(n^b) \cup O(c^n)$
+ - multiplying above by positive values still hold so: $O(n) \cup O(n \log_n)$ for example.
+
+<Callout emoji="💭">
+Big-Oh 'sets' is my own language. I'm not positive if that's the right way
+to say things.
+
+Big-Oh notation lets us simplify problems into groups with similar efficiecy levels 
+in terms of the number of instructions that need to be executed. 
+</Callout>
+
+If two algorithms share the same big-Oh notation (i.e., are in the same big-Oh set), it 
+can't be said which algorithm is faster.
+
+<Callout emoji="💭">
+Below is my attempt at an example. It should not be considered
+a formal proof, but rather as an attempt to demonstrate the general
+utility of big-Oh.
+</Callout>
+
+However, if two algorithms have different big-Oh notation, then it can be reasoned
+if one is faster than the other assuming some $n$ big enough.
+
+For example if $f_1(n) \in O(n)$ and $f_2(n) \in O(n\log_n)$ then we know that
+$n \leq c_1 \cdot f_1(n)$ and $n \log_n \leq c_2 \cdot f_2(n)$ for $c_1, c_2 > 0$.
+
+Also, taking as given that $n \leq n log_n$ for $n > 0$, then for some $n$ big enough
+$n \leq c_1 \cdot f_1(n) \leq n \log_n \leq c_2 f_2(n)$.
+
+Simplifying the above we have $c_1 \cdot f_1(n) \leq c_2 f_2(n)$. 
+
