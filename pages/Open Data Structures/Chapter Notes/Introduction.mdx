@@ -173,13 +173,7 @@ Then, $E[I_i] = (1/2)1 + (1/2)0 = 1/2$.
 Using linearity, $E[X] = E[\displaystyle\sum_{i=1}^k I_i] = \displaystyle\sum_{i=1}^k E[I_i] = \displaystyle\sum_{i=1}^k (1/2) = k/2$
 
 <Callout emoji="💭">
-I think understanding expected values and linearity can be confusing, but one way I am trying
-to think about it is in terms of experiments. If I have experiment A that produces blue slime and
-experiment B that produces orange slime. I can ask, if I run experiment A with experiment B, how much blue and orange
-slime do I expect to have? On some level, this does not seem very intuitive. If experiment A and experiment B are separate,
-then how can running one tell me anything about the other does? Each one will simply do what they do (even if there is some correlation between them). In fact, with linearity, I can say something that makes more sense.
-If I want to know how much blue and orange slime I have after running experiment A and experiment B, I can
-instead just run experiment A and experiment B separately adding their results. Note this is equivalent to saying: E[A + B]. 
-If you have E[AB]...then things can get more complicated depending on correlation between A and B.
-See [here](https://math.stackexchange.com/questions/2080030/linearity-of-expectations-why-does-it-hold-intuitively-even-when-the-r-v-s-are).
+One thing that I find unintuitive but which is very powerful is that linearity of expectation holds
+even if random variables $X$ and $Y$ are somehow related to each other (i.e., what happens in $X$ impacts what happens in $Y$)! Further detail to this is outside the scope of these notes, but a quick web search
+will confirm that fact for you. Here's two supplemental confirmation sources: [Source 1](https://courses.cs.washington.edu/courses/cse312/19sp/schedule/lecture13.pdf) and [Source 2](https://dlsun.github.io/probability/linearity.html)
 </Callout>
