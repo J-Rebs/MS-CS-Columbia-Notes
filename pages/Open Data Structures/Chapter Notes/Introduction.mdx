@@ -140,3 +140,46 @@ $n \leq c_1 \cdot f_1(n) \leq n \log n \leq c_2 f_2(n)$.
 
 Simplifying the above we have $c_1 \cdot f_1(n) \leq c_2 f_2(n)$. 
 
+## Randomization and Probability
+
+Some data structures may make random choices, which means operations
+don't always run in the same amount of time.
+
+Then, look at the expected (i.e., predicted average) running time for an operation. 
+
+For a discrete random variable $X$ in universe $U$, 
+define expected value as $E[X] = \sum_{x \in U} x \cdot Pr[X=x]$.
+
+In words, the expected value of a random variable is the sum of each possible value X can take
+times the chance that value occurs.
+
+Also, expectations are linear! More complicated problems can be broken down
+into simpler ones.
+
+$E[X + Y] = E[X] + E[Y]$. Generalized, find that for random variables
+$X_1, \ldots, X_k$ have $E[\sum_{i=1}^k X_k] = \sum_{i=1}^k E[X_i]$.
+
+Linearity makes it easier to work with indicator random variables. 
+Indicator random variables are those that predict the count of something.
+
+For example, a heads/tails coin flipped $k$ times has an expected number of heads
+$k/2$. 
+
+For $i \in \{1,\ldots,k\}, let an indicator variable 
+$I_i$ be $1$ if the $ith$ coin toss is heads or $0$ otherwise.
+
+Then, $E[I_i] = (1/2)1 + (1/2)0 = 1/2$. 
+
+Using linearity, $E[X] = E[\sum_{i=1}^k I_i] = \sum_{i=1}^k E[I_i] = \sum_{i=1}^k (1/2) = k/2$
+
+<Callout emoji="💭">
+I think understanding expected values and linearity can be confusing, but one way I am trying
+to think about it is in terms of experiments. If I have experiment A that produces blue slime and
+experiment B that produces orange slime. I can ask, if I run experiment A with experiment B, how much blue and orange
+slime do I expect to have? On some level, this does not seem very intuitive. If experiment A and experiment B are separate,
+then how can running one tell me anything about the other does? Each one will simply do what they do (even if there is some correlation between them). In fact, with linearity, I can say something that makes more sense.
+If I want to know how much blue and orange slime I have after running experiment A and experiment B, I can
+instead just run experiment A and experiment B separately adding their results. Note this is equivalent to saying: E[A + B]. 
+If you have E[AB]...then things can get more complicated depending on correlation between A and B.
+See [here](https://math.stackexchange.com/questions/2080030/linearity-of-expectations-why-does-it-hold-intuitively-even-when-the-r-v-s-are).
+</Callout>
