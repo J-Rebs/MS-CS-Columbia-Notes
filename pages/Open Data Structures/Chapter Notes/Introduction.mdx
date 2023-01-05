@@ -94,24 +94,24 @@ same big-Oh set. This comes from the definition of big-Oh notation!
 
 It only needs to be true that for whatever $g(n)$ we pick, that $f(n)$ dominates $g(n)$. 
 
-For example $f(n) = 5n\log_n + 8n - 200$. 
-Then it is true that $f(n) \leq c\cdot n\log_n \implies f(n) \in O(n\log_n)$,
+For example $f(n) = 5n\log n + 8n - 200$. 
+Then it is true that $f(n) \leq c\cdot n\log n \implies f(n) \in O(n\log n)$,
 where we can pick $c$ to be a big enough integer constant for the above to hold true.
 
 The definition of big-Oh also implies that one $f(n)$ can be in multiple 
 big-Oh sets. 
 
-$f(n)$ from above $\leq n\log_n$ but also $\leq c^n$ for some sufficiently large $c$. 
+$f(n)$ from above $\leq n\log n$ but also $\leq c^n$ for some sufficiently large $c$. 
 
-This implies $f(n) \in O(n log_n)$ and $f(n) \in O(c^n)$. 
+This implies $f(n) \in O(n log n)$ and $f(n) \in O(c^n)$. 
 
 Which leads to another implication! Some sets in big-Oh can be subsets of each other.
 
 For any $c_1 < c_2$ and constants $a,b,c > 0$: 
 
  - $O(n^{c_1}) < O(n^{c_2})$ 
- - $O(a) \subset O(\log_n) \subset O(n^b) \subset O(c^n)$
- - multiplying above by positive values still hold so: $O(n) \subset O(n \log_n)$ for example.
+ - $O(a) \subset O(\log n) \subset O(n^b) \subset O(c^n)$
+ - multiplying above by positive values still hold so: $O(n) \subset O(n \log n)$ for example.
 
 <Callout emoji="💭">
 Big-Oh 'sets' is my own language. I'm not positive if that's the right way
@@ -132,11 +132,11 @@ asymptotic (big-Oh) notation from here.
 If two algorithms have different big-Oh notation, then it can be reasoned
 if one is faster than the other assuming some $n$ big enough.
 
-For example if $f_1(n) \in O(n)$ and $f_2(n) \in O(n\log_n)$ then we know that
-$n \leq c_1 \cdot f_1(n)$ and $n \log_n \leq c_2 \cdot f_2(n)$ for $c_1, c_2 > 0$.
+For example if $f_1(n) \in O(n)$ and $f_2(n) \in O(n\log n)$ then we know that
+$n \leq c_1 \cdot f_1(n)$ and $n \log n \leq c_2 \cdot f_2(n)$ for $c_1, c_2 > 0$.
 
-Also, taking as given that $n \leq n log_n$ for $n > 0$, then for some $n$ big enough,
-$n \leq c_1 \cdot f_1(n) \leq n \log_n \leq c_2 f_2(n)$.
+Also, taking as given that $n \leq n log n$ for $n > 0$, then for some $n$ big enough,
+$n \leq c_1 \cdot f_1(n) \leq n \log n \leq c_2 f_2(n)$.
 
 Simplifying the above we have $c_1 \cdot f_1(n) \leq c_2 f_2(n)$. 
 
