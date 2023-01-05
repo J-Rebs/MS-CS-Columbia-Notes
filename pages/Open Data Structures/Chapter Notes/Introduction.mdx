@@ -148,7 +148,7 @@ don't always run in the same amount of time.
 Then, look at the expected (i.e., predicted average) running time for an operation. 
 
 For a discrete random variable $X$ in universe $U$, 
-define expected value as $E[X] = \sum_{x \in U} x \cdot Pr[X=x]$.
+define expected value as $E[X] = \displaystyle\sum_{x \in U} x \cdot Pr[X=x]$.
 
 In words, the expected value of a random variable is the sum of each possible value X can take
 times the chance that value occurs.
@@ -157,7 +157,7 @@ Also, expectations are linear! More complicated problems can be broken down
 into simpler ones.
 
 $E[X + Y] = E[X] + E[Y]$. Generalized, find that for random variables
-$X_1, \ldots, X_k$ have $E[\sum_{i=1}^k X_k] = \sum_{i=1}^k E[X_i]$.
+$X_1, \ldots, X_k$ have $E[\displaystyle\sum_{i=1}^k X_k] = \displaystyle\sum_{i=1}^k E[X_i]$.
 
 Linearity makes it easier to work with indicator random variables. 
 Indicator random variables are those that predict the count of something.
@@ -170,7 +170,7 @@ $I_i$ be $1$ if the $ith$ coin toss is heads or $0$ otherwise.
 
 Then, $E[I_i] = (1/2)1 + (1/2)0 = 1/2$. 
 
-Using linearity, $E[X] = E[\sum_{i=1}^k I_i] = \sum_{i=1}^k E[I_i] = \sum_{i=1}^k (1/2) = k/2$
+Using linearity, $E[X] = E[\displaystyle\sum_{i=1}^k I_i] = \displaystyle\sum_{i=1}^k E[I_i] = \displaystyle\sum_{i=1}^k (1/2) = k/2$
 
 <Callout emoji="💭">
 I think understanding expected values and linearity can be confusing, but one way I am trying
