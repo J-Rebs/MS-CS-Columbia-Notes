@@ -211,3 +211,19 @@ memory blocks.
 
 
 ## Correctness, Time Complexity, and Space Complexity
+
+- Correctness: data structure correctly implements interface
+- Time complexity: running time (think big-Oh notation) of operations on data structure
+ - running time types:
+    - worst-case: strongest running time guarantee. Operations never take longer than $f(n)$
+    - amortized: $m$ operations may take at most $mf(n)$ time. Implies that on average, take $f(n)$ time
+    - expected: running time is a random variable, $f(n)$ is the expected value of the random variable
+- Space complexity: data structure should use as little memory as possible
+
+Consider that worst-case running times might often be worse than amortized running times.
+If can accept the risk that $actual$ running time is worse than $expected$, may make sense to use amortized 
+running time in analysis. 
+
+Assume for these notes, correctness is true. Data structures don't perform actions
+improperly.
+
