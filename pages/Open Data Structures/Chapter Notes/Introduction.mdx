@@ -180,3 +180,34 @@ Further detail to this is outside the scope of these notes, but a quick web sear
 will confirm that fact for you. 
 Here's two supplemental confirmation sources: [Source 1](https://courses.cs.washington.edu/courses/cse312/19sp/schedule/lecture13.pdf) and [Source 2](https://dlsun.github.io/probability/linearity.html).
 </Callout>
+
+## The Model of Computation 
+
+These notes are based on a model of computation. The model selected is a 
+w-bit word-RAM model. 
+
+RAM = Random Access Memory. 
+
+Implication of the above: basic operations on words take constant time
+(i.e., arithmetic operations, comparisons, and bitwise boolean operations)
+
+Reading a cell (i.e.,  a w-bit word) happens in constant time.
+
+Assume that $w \geq log n$. Where $n$ is the number of elements in any data structure. 
+
+Assume that all data structures studied are of generic type $T$, where each element
+of type $T$ occupies one word of memory. 
+
+Allocating memory takes $O(k)$ time where $k$ is the size of the memory allocated,
+and what is returned is a reference to that memory block.
+
+This reference is called a pointer! Pointers are small enough to 
+be represented by a single word. 
+
+<Callout emoji="💭">
+Using pointers allows you to find and work with arbitrarily sized
+memory blocks.
+</Callout>
+
+
+## Correctness, Time Complexity, and Space Complexity
