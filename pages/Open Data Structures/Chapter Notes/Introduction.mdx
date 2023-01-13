@@ -25,12 +25,12 @@ and implementation (algorithms and internal representation of data needed for op
 | Unordered Sets (includes Dictionaries, Maps) | Distinct elements in no particular order |
 | Sorted Sets | Provides ability to compare elements to determine ordering, find(x) more meaningful as you say find smallest y such that y >= x. Return y or null if does not exist. Slower runtime on find though versus Unsorted|
 
-# Mathematical background (🤓)
+# Mathematical background
 
 These notes are brief. If there is time, in the future, could be good to look through [this](https://people.csail.mit.edu/meyer/mcs.pdf). Have not 
 yet had time to do so, but found based on citations for this book and a quick web search.
 
-## Exponents, Logarithms, and Factorials
+## Exponents, logarithms, and factorials
 
 For some positive integer $b$, we can say that $b^x = b \times b \times \cdots \times b$ 
 where the right hand side has $b$ $x$ times. 
@@ -76,7 +76,7 @@ $n$ choose $k$ (i.e., number of distinct subsets) is smaller than permutations o
 </Callout>
 
 
-## Asymptotic Notation (run time)
+## Asymptotic notation (run time)
 
 Time to execute = number of instructions run NOT total time in seconds
 for instructions to execute.
@@ -141,7 +141,7 @@ $n \leq c_1 \cdot f_1(n) \leq n \log n \leq c_2 f_2(n)$.
 
 Simplifying the above we have $c_1 \cdot f_1(n) \leq c_2 f_2(n)$. 
 
-## Randomization and Probability
+## Randomization and probability
 
 Some data structures may make random choices, which means operations
 don't always run in the same amount of time.
@@ -182,7 +182,7 @@ will confirm that fact for you.
 Here's two supplemental confirmation sources: [Source 1](https://courses.cs.washington.edu/courses/cse312/19sp/schedule/lecture13.pdf) and [Source 2](https://dlsun.github.io/probability/linearity.html).
 </Callout>
 
-## The Model of Computation 
+## The model of computation 
 
 These notes are based on a model of computation. The model selected is a 
 w-bit word-RAM model. 
@@ -211,7 +211,7 @@ memory blocks.
 </Callout>
 
 
-## Correctness, Time Complexity, and Space Complexity
+## Correctness, time complexity, and space complexity
 
 - Correctness: data structure correctly implements interface
 - Time complexity: running time (think big-Oh notation) of operations on data structure
@@ -228,7 +228,7 @@ running time in analysis.
 Assume for these notes, correctness is true. Data structures don't perform actions
 improperly.
 
-## Open Data Structures Dependency Graph
+## Open Data Structures dependency graph
 
 The below shows how sections in the Open Data Structures
 textbook relate. 
